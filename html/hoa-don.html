@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Hóa đơn bán hàng</title>
+    <link rel="stylesheet" href="../css/style-hoadon.css" ></link>
+</head>
+<body>
+    <table border="1"> 
+       
+     <caption>HÓA ĐƠN BÁN HÀNG</caption>
+        <tr>
+            <td>STT</td>
+            <td>Tên hàng</td>
+            <td>Số lượng</td>
+            <td>Đơn giá</td>
+            <td>Đôn vị tính </td>
+            <td>Thành tiền</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>A</td>
+            <td class="soluong">2</td>
+            <td class="dongia">50</td>
+            <td>Thùng</td>
+            <td class="thanhtien">?</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>B</td>
+            <td class="soluong">5</td>
+            <td class="dongia">70</td>
+            <td>Cái</td>
+            <td class="thanhtien">?</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>C</td>
+            <td class="soluong">7</td>
+            <td class="dongia">100</td>
+            <td>Thùng</td>
+            <td class="thanhtien">?</td>
+        </tr>
+
+        <tr>
+            <td colspan="4">Tổng Thanh toán </td>
+            <td colspan="2" id="tongthanhtoan">?</td>
+        </tr>
+        <script>
+            const sl = document.getElementsByClassName("soluong");
+            const tt = document.getElementsByClassName("thanhtien");
+            const dg = document.getElementsByClassName("dongia");
+
+            let tongthanhtoan = 0;
+            for(let i=0 ;i<sl.length; i++)
+            {
+                //tinh thành tiền
+                tt[i].innerHTML = Number(sl[i].innerHTML)*Number(dg[i].innerHTML);
+                // cộng thanh toán
+                tongthanhtoan+= Number(tt[i].innerHTML)
+            }
+            document.getElementById("tongthanhtoan").innerHTML=tongthanhtoan;
+        </script>
+
+        
+    </table>
+</body>
