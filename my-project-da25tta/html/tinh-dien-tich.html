@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <title>Tính Diện Tích</title>
+    </head>
+
+    <body>
+    <script>
+        let d,r;
+        do{
+         d = Number(prompt("Nhập chiều dài"));
+         r = Number(prompt ("Nhập chiều rộng"));
+        }while(d<r);
+        if(d==r)
+            { window.alert(`Chiều dài ${d} cm, chiều rộng ${r} cm . Diện tích hình chữ nhật ${d*d} cm`);}
+        if(d>r)
+         {window.alert(`Chiều dài ${d} cm, chiều rộng ${r} cm . Diện tích hình chữ nhật ${d*r} cm`);}
+    </script>    
+    </body>
+
+</html>

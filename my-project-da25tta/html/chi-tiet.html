@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chi Tiết</title>
+    <script src="js/data.js"></script>
+    <script src="js/sanpham2.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <img src="" alt="" id="image">
+    <h3 id="name">Tên</h3>
+    <h4 id="price">Giá</h4>
+    <p id="des">Giá</p>
+
+    </div>
+
+    <script>
+        const urlParams= URLSearchParams(window.location.search);
+
+        const productId=urlParams.get("masp");
+
+        let found = productlist.find(item => item.id === productId);
+        {
+            document.getElementById=("name").innerHTML = found.name;
+            document.getElementById=("price").innerHTML = found.price;
+            document.getElementById=("des").innerHTML = found.description;
+            document.getElementById=("image").src = found.image;
+            document.getElementById=("image").alt = found.name;
+        
+        }
+    </script>
+</body>
+</html>
