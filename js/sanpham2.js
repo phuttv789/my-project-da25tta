@@ -40,7 +40,7 @@ function createItem(obj) {
 }
 function createItem(obj)
 {
-    const list = document.getElementById("product-list");
+    const list = document.getElementById("product");
     list.innerHTML+=`
     <div class="col">
         <div class="card product-item">
@@ -54,8 +54,8 @@ function createItem(obj)
                     <a href="${obj.link}?masp"${obj.id} class="card-link btn btn-info">Xem chi tiết </a>
                 </div>    
         </div>
-    </div>
-`}
+    </div>`;
+}
 function fullitem(arr)
 {
     let i=0;
