@@ -5,7 +5,7 @@ const products = [
     price: "2.790.000VND/1 đôi",
     description: "Được sản xuất bởi hãng NIKE.",
     image: "../assets/giaydabanh.jpg",
-    link:"chi-tiwt.html",
+    linkProduct:"chi-tiet.html",
     },
 
 
@@ -15,6 +15,6 @@ const products = [
     price: "2.700.000VND/1 đôi",
     description: "Được sản xuất bởi hãng NIKE.",
     image: "../assets/giaybongda.jpg",
-    link:"chi-tiwt.html",
+    linkProduct:"chi-tiet.html",
     }
 ]

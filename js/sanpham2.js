@@ -38,20 +38,21 @@ function createItem(obj) {
 
     document.getElementById("product-list").appendChild(item);
 }
+
 function createItem(obj)
-{
+{   
     const list = document.getElementById("product");
     list.innerHTML+=`
     <div class="col">
         <div class="card product-item">
-                <div class ="product-image">
+                <div class="product-image">
                     <img class="card-img-top" src="${obj.image}" alt="${obj.name}">
                 </div>
                 <div class="card-body product-info text-center">
                     <h4 class="card-title text-primary">${obj.name} </h4>
-                    <h5 class = "card text">${obj.price} </h5>
-                    <p style = "text-align: justify; line-height:1.5" class="card-text">${obj.description}</p>
-                    <a href="${obj.link}?masp"${obj.id} class="card-link btn btn-info">Xem chi tiết </a>
+                    <h5 class="card-text">${obj.price} </h5>
+                    <p style ="text-align: justify; line-height:1.5" class="card-text">${obj.description}</p>
+                    <a href="<a href="${obj.linkProduct}?masp=${obj.id}" class="card-link btn btn-info">Xem chi tiết </a>
                 </div>    
         </div>
     </div>`;
@@ -59,7 +60,7 @@ function createItem(obj)
 function fullitem(arr)
 {
     let i=0;
-    while(i<arr.lenght){
+    while(i < arr.length){
         createItem(arr[i]);
         i++;
     }
