@@ -1,62 +1,158 @@
-*{
-   
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15pt;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
 
+:root{
+    --bg: #0d1321;
+    --surface: #1a2238;
+    --surface-alt: #212c47;
+    --border: #2e3a59;
+    --text: #e7ecf5;
+    --text-muted: #97a3bd;
+    --accent: #2dd4bf;
+    --accent-soft: rgba(45, 212, 191, 0.12);
+    --accent-2: #8b7cf6;
+    --accent-2-soft: rgba(139, 124, 246, 0.12);
+    --radius: 18px;
 }
+
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+body{
+    margin: 0;
+    padding: 50px 20px;
+    background: radial-gradient(circle at top left, #16213a, var(--bg) 60%);
+    color: var(--text);
+    min-height: 100vh;
+}
+
 img{
-    border-radius: 30px;
-   
+    border-radius: var(--radius);
+    border: 3px solid var(--accent);
 }
+
+.div1{
+    max-width: 900px;
+    margin: 0 auto;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    background: var(--surface);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+}
+
+h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 38px;
+    margin: 0 0 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2, h3{
+    font-family: 'Poppins', sans-serif;
+    color: var(--text);
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 32px;
+    margin-bottom: 14px;
+    padding-left: 14px;
+    border-left: 4px solid var(--accent);
+}
+
 table#bang1{
-    border: 2px solid ;
-    border-radius: 30px;
-    background: linear-gradient(to left, #9999ff 0%, #ff66ff 46%);
-    
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface-alt);
+    border-collapse: separate;
+    overflow: hidden;
+}
+
+table#bang1 td{
+    padding: 24px;
+    vertical-align: top;
 }
 
 table#bang2{
-    border: 2px solid;
+    width: 100%;
+    border: 1px solid var(--border);
     border-collapse: collapse;
-    padding: 20px;
-
+    border-radius: var(--radius);
+    overflow: hidden;
 }
 
-table#bang2 td ,table#bang2 ,table#bang2 th, table#bang2 tr{
-    border: 2px solid;
-    padding: 20px;
-     background: linear-gradient(to top right, #ccff99 0%, #66ff99 100%);
-     
-    
+table#bang2 td, table#bang2 th{
+    border: 1px solid var(--border);
+    padding: 16px 20px;
+    background: var(--surface-alt);
+    text-align: left;
 }
 
-ul{
+table#bang2 th{
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+table#bang2 tr:nth-child(even) td{
+    background: var(--surface);
+}
+
+ul, ol{
+    width: 100%;
     list-style-position: inside;
-    border: 2px solid;
-    padding: 20px;
-    border-radius: 30px;
-    width: 50%;
-     background: linear-gradient(to bottom right, #cc0000 0%, #00ff00 100%);
+    border: 1px solid var(--border);
+    padding: 20px 24px;
+    border-radius: var(--radius);
+    background: var(--accent-soft);
 }
-
 
 ol{
-    width: 50%;
-    list-style-position: inside;
-    border: 2px solid;
-    border-radius: 30px;
-    padding: 20px;
-    background: linear-gradient(to bottom right, #cc0000 0%, #00ff00 100%);
-    
+    background: var(--accent-2-soft);
 }
 
-h1 , h2,h3{
-    color: rebeccapurple;
-    font: 30px; 
+ul li, ol li{
+    padding: 6px 0;
+    color: var(--text);
 }
-.div1{
-    border: 2px solid black;
-    margin: 10px 100px 0px;
-    padding: 20px;
-    background-color: hsl (0,37%,49%);
+
+a{
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+a:hover{
+    border-bottom-color: var(--accent);
+}
+
+p{
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+p b, p u, p i{
+    color: var(--text);
+}
+
+@media (max-width: 640px){
+    .div1{
+        padding: 24px;
+    }
+    table#bang1, table#bang1 tbody, table#bang1 tr, table#bang1 td{
+        display: block;
+        width: 100%;
+    }
+    table#bang1 td{
+        text-align: center;
+    }
 }

@@ -5,31 +5,34 @@
     <title>Chi Tiết</title>
     <script src="../js/data.js"></script>
     <script src="../js/sanpham2.js"></script>
+      <link rel="stylesheet" href="../css/style-chi-tiet.css">
 </head>
 
 <body>
-    <div class="container">
-    <img src="" alt="" id="image">
-    <h3 id="name">Tên sản phẩm</h3>
-    <h4 id="price">Giá</h4>
-    <p id="des">Giá</p>
-
+     <div class="container">
+        <img src="" alt="" id="image">
+        <div class="info">
+            <h2 id="name">Tên</h2>
+            <h2 id="price">Giá</h2>
+            <h4 id="des">Mô tả</h4>
+            <div class="btn-group">
+                <button class="btn-buy">Mua ngay</button>
+                <button class="btn-cart">Thêm vào giỏ hàng</button>
+            </div>
+        </div>
     </div>
-
+ 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
-
         const productId = urlParams.get("masp");
-
-        let found = product.find(item => String (item.id) === productId);
-        if (found)
-        {
+ 
+        let found = products.find(item => String(item.id) === productId);
+        if (found) {
             document.getElementById("name").innerHTML = found.name;
             document.getElementById("price").innerHTML = found.price;
             document.getElementById("des").innerHTML = found.description;
             document.getElementById("image").src = found.image;
             document.getElementById("image").alt = found.name;
-        
         }
     </script>
 </body>

@@ -52,7 +52,7 @@ function createItem(obj)
                     <h4 class="card-title text-primary">${obj.name} </h4>
                     <h5 class="card-text">${obj.price} </h5>
                     <p style ="text-align: justify; line-height:1.5" class="card-text">${obj.description}</p>
-                    <a href="<a href="${obj.linkProduct}?masp=${obj.id}" class="card-link btn btn-info">Xem chi tiết </a>
+                    <a href="${obj.linkProduct}?masp=${obj.id}" class="card-link btn btn-info">Xem chi tiết</a>
                 </div>    
         </div>
     </div>`;
